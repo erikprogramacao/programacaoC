@@ -87,7 +87,7 @@ int main(){
 
     //compração das cartas
 
-    printf("Comparação das Cartas (1= Carta 01 ganha // 0= Carta 02 ganha)");
+    printf("Comparação das Cartas (1= Carta 01 ganha // 0= Carta 02 ganha)\n");
     printf("População: %d\n", pop1>pop2);
     printf("Área: %d\n", are1>are2);
     printf("PIB: %d\n", pib1>pib2);
