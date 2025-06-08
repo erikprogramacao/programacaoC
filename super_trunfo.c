@@ -2,15 +2,16 @@
 
 int main(){
 
-    /*Desafio do nivel Novato
+    /*Desafio do nivel Mestre
     Aluno: Erik Holanda
     Curso: Ciência da Computação
-    06/06/2025 - 10:57 am*/
+    08/06/2025 - 17:00 am*/
 
     //criando as variaveis
     char est1[20], est2[20], cod1[20], cod2[20],cid1[20], cid2[20];
-    int pop1, pop2, tur1, tur2;
-    float are1, are2, pib1, pib2, denspop1, pibper1, denspop2, pibper2;
+    int tur1, tur2;
+    int pop1, pop2;
+    float are1, are2, pib1, pib2, denspop1, pibper1, denspop2, pibper2, superPoder1, superPoder2;
 
     //coletando os dados da carta 01
     printf("--Informe os dados da Carta 01--\n");
@@ -54,6 +55,10 @@ int main(){
     denspop2 = (float) pop2/are2;
     pibper2 = (float) pib2/pop2;
 
+    //calculando o super poder das cartas 01 e 02
+    superPoder1 = (float) (pop1+are1+pib1+tur1+pibper1)+(1/denspop1);
+    superPoder2 = (float) (pop2+are2+pib2+tur2+pibper2)+(1/denspop2);
+
     //mostrando os dados da carta 01
     printf("Carta 1:\n");
     printf("Estado: %s\n", est1);
@@ -65,6 +70,7 @@ int main(){
     printf("Pontos Turisticos: %d\n", tur1);
     printf("Densidade populacional: %.2f\n", denspop1);
     printf("PIB Per Capita: %.2f\n", pibper1);
+    printf("Super Poder: %.2f\n", superPoder1);
 
     //mostrando os dados da carta 02
     printf("Carta 2:\n");
@@ -77,6 +83,18 @@ int main(){
     printf("Pontos Turisticos: %d\n", tur2);
     printf("Densidade populacional: %.2f\n", denspop2);
     printf("PIB Per Capita: %.2f\n", pibper2);
+    printf("Super Poder: %.2f\n", superPoder2);
+
+    //compração das cartas
+
+    printf("Comparação das Cartas (1= Carta 01 ganha // 0= Carta 02 ganha)");
+    printf("População: %d\n", pop1>pop2);
+    printf("Área: %d\n", are1>are2);
+    printf("PIB: %d\n", pib1>pib2);
+    printf("Pontos Turísticos: %d\n", tur1>tur2);
+    printf("Densidade Populacional: %d\n", denspop1<denspop2);
+    printf("PIB Per Capita: %d\n", pibper1>pibper2);
+    printf("Super Poder: %d\n", superPoder1>superPoder2);
 
     return 0;
 }
